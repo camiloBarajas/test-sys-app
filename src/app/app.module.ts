@@ -11,6 +11,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { FormsModule } from '@angular/forms'; 
 import { MatTableModule } from '@angular/material/table';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatInputModule} from '@angular/material/input';
 import { MatDialogModule } from '@angular/material/dialog';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -45,7 +46,8 @@ import { ImagesComponent } from './images/images.component';
     MatDialogModule,
     MatSnackBarModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

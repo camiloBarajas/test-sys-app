@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl: "http://localhost/facturas_angular",
+  baseUrl: "http://localhost:4200/facturas_angular",
 };
 
 /*

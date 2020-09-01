@@ -1,7 +1,7 @@
 <?php
-header("Access-Control-Allow-Origin: http://localhost:4200");
-header("Access-Control-Allow-Methods: PUT");
-header("Access-Control-Allow-Headers: *");
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: PUT, GET, POST, DELETE");
+header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept");
 if ($_SERVER["REQUEST_METHOD"] != "PUT") {
     exit("Solo acepto peticiones PUT");
 }
