@@ -28,9 +28,13 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -123,6 +127,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "test-sys-app"
+    }
+  },
+  "defaultProject": "test-sys-app",
+  "cli": {
+    "analytics": "9b4cc709-7008-4008-a539-049ae212fff3"
+  }
 }
