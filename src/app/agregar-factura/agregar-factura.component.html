@@ -1,25 +1,25 @@
-<h2>Agregar mascota <mat-icon>pets</mat-icon></h2>
+<h2>Agregar factura <mat-icon>facturas</mat-icon></h2>
 <form (ngSubmit)="onSubmit()" #formMascota="ngForm">
     <p>
 
         <mat-form-field>
-            <input matInput name="nombre" [(ngModel)]="mascotaModel.nombre"
+            <input matInput name="numero" [(ngModel)]="facturaModel.numero_doc"
                 type="text"
-                placeholder="Nombre">
+                placeholder="Número">
         </mat-form-field>
     </p>
     <p>
         <mat-form-field>
-            <input matInput name="raza" [(ngModel)]="mascotaModel.raza"
+            <input matInput name="codigo" [(ngModel)]="facturaModel.codigo_estado"
                 type="text"
-                placeholder="Raza">
+                placeholder="Código">
         </mat-form-field>
     </p>
     <p>
         <mat-form-field>
-            <input matInput name="edad" [(ngModel)]="mascotaModel.edad"
+            <input matInput name="fecha" [(ngModel)]="facturaModel.fecha_fac"
                 type="number"
-                placeholder="Edad">
+                placeholder="Fecha">
         </mat-form-field>
     </p>
     <p>

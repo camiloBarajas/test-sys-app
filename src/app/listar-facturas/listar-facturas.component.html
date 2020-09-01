@@ -1,17 +1,21 @@
-<h2>Listado de mascotas</h2>
+<h2>Listado de facturas</h2>
 <table mat-table [dataSource]="facturas" class="mat-elevation-z8" style="width:
     100%;">
-    <ng-container matColumnDef="nombre">
-        <th mat-header-cell *matHeaderCellDef>Nombre</th>
-        <td mat-cell *matCellDef="let factura"> {{factura.nombre}} </td>
+    <ng-container matColumnDef="NUME_DOC">
+        <th mat-header-cell *matHeaderCellDef>Numero</th>
+        <td mat-cell *matCellDef="let factura"> {{factura.numero_doc}} </td>
     </ng-container>
-    <ng-container matColumnDef="raza">
-        <th mat-header-cell *matHeaderCellDef>Raza</th>
-        <td mat-cell *matCellDef="let factura"> {{factura.raza}} </td>
+    <ng-container matColumnDef="CODI_ESTADO">
+        <th mat-header-cell *matHeaderCellDef>Codigo</th>
+        <td mat-cell *matCellDef="let factura"> {{factura.codigo_estado}} </td>
     </ng-container>
-    <ng-container matColumnDef="edad">
-        <th mat-header-cell *matHeaderCellDef>Edad</th>
-        <td mat-cell *matCellDef="let factura"> {{factura.edad}} </td>
+    <ng-container matColumnDef="FECHA_FAC">
+        <th mat-header-cell *matHeaderCellDef>Fecha</th>
+        <td mat-cell *matCellDef="let factura"> {{factura.fecha_fac}} </td>
+    </ng-container>
+    <ng-container matColumnDef="VALOR_FAC">
+        <th mat-header-cell *matHeaderCellDef>Valor</th>
+        <td mat-cell *matCellDef="let factura"> {{factura.valor_fac}} </td>
     </ng-container>
     <ng-container matColumnDef="editar">
         <th mat-header-cell *matHeaderCellDef>Editar</th>
@@ -30,8 +34,8 @@
         </td>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="['nombre', 'raza', 'edad', 'editar',
+    <tr mat-header-row *matHeaderRowDef="['NUME_DOC', 'CODI_ESTADO', 'FECHA_FAC', 'VALOR_FAC',
         'eliminar']"></tr>
-    <tr mat-row *matRowDef="let fila; columns: ['nombre', 'raza', 'edad',
+    <tr mat-row *matRowDef="let fila; columns: ['NUME_DOC', 'CODI_ESTADO', 'VALOR_FAC',
         'editar', 'eliminar'];"></tr>
 </table>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FacturasService } from "../facturas.service"
-import { Factura } from "../factura"
+import { FacturasService } from "facturas.service"
+import { Factura } from "factura"
 import { MatDialog } from '@angular/material/dialog';
 import { DialogoConfirmacionComponent } from "../dialogo-confirmacion/dialogo-confirmacion.component"
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -11,8 +11,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./listar-facturas.component.scss']
 })
 export class ListarFacturasComponent implements OnInit {
-  private facturas: Factura[] = [
-    new Factura(52654, 554546, 20)
+  public facturas: Factura[] = [
+    new Factura(52654, 554546, 20, 5)
   ];
 
   constructor(private facturasService: FacturasService, private dialogo: MatDialog, private snackBar: MatSnackBar) { }
@@ -20,7 +20,7 @@ export class ListarFacturasComponent implements OnInit {
   eliminarFactura(factura: Factura) {
     this.dialogo
       .open(DialogoConfirmacionComponent, {
-        data: `¿Realmente quieres eliminar a ${factura.numero}?`
+        data: `¿Realmente quieres eliminar a ${factura.id}?`
       })
       .afterClosed()
       .subscribe((confirmado: Boolean) => {
@@ -42,7 +42,7 @@ export class ListarFacturasComponent implements OnInit {
 
   obtenerFacturas() {
     return this.facturasService
-      .getMascotas()
+      .getFacturas()
       .subscribe((facturas: Factura[]) => this.facturas = facturas);
   }
 

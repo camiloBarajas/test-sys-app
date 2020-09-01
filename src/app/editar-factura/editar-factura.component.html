@@ -2,23 +2,30 @@
 <form (ngSubmit)="onSubmit()" #formFactura="ngForm">
     <p>
         <mat-form-field>
-            <input matInput name="nombre" [(ngModel)]="factura.nombre"
+            <input matInput name="numero_doc" 
                 type="text"
-                placeholder="Nombre">
+                placeholder="Número documento">
         </mat-form-field>
     </p>
     <p>
         <mat-form-field>
-            <input matInput name="raza" [(ngModel)]="factura.raza"
+            <input matInput name="codigo" 
                 type="text"
-                placeholder="Raza">
+                placeholder="Código">
         </mat-form-field>
     </p>
     <p>
         <mat-form-field>
-            <input matInput name="edad" [(ngModel)]="factura.edad"
+            <input matInput name="fecha"
                 type="number"
-                placeholder="Edad">
+                placeholder="Fecha">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <input matInput name="valor" 
+                type="number"
+                placeholder="Valor">
         </mat-form-field>
     </p>
     <p>

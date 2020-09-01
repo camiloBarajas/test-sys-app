@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { MascotasService } from "../mascotas.service"
-import { Factura } from '../factura';
+import { FacturasService } from "facturas.service"
+import { Factura } from 'factura';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class EditarFacturaComponent implements OnInit {
 
-  private factura: Factura = new Factura(0, 0, 0, 0 , '');
+  private factura: Factura = new Factura(0, 0, 0, 0 , 65);
 
   constructor(private route: ActivatedRoute,
     private router: Router, private facturasService: FacturasService,

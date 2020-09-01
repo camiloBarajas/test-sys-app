@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Factura } from '../factura';
-import { FacturasService } from "../facturas.service"
+import { Factura } from 'factura';
+import { FacturasService } from "facturas.service"
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
@@ -17,7 +17,7 @@ export class AgregarFacturaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  facturaModel = new Factura("", "", undefined)
+  facturaModel = new Factura(112,112 ,1212 ,undefined)
 
   onSubmit() {
     this.facturasService.addFactura(this.facturaModel).subscribe(() => {
