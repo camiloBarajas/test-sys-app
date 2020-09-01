@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-09-2020 a las 19:34:52
+-- Tiempo de generación: 01-09-2020 a las 21:42:07
 -- Versión del servidor: 10.4.8-MariaDB
 -- Versión de PHP: 7.1.33
 
@@ -34,6 +34,13 @@ CREATE TABLE `clientes` (
   `DIRECCION` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`NUME_DOC`, `NOMBRE`, `DIRECCION`) VALUES
+(1212, 'hshahsa', 'sasas');
+
 -- --------------------------------------------------------
 
 --
@@ -44,6 +51,13 @@ CREATE TABLE `estados_factura` (
   `CODI_ESTADO` int(2) NOT NULL,
   `DESCRIPCION` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `estados_factura`
+--
+
+INSERT INTO `estados_factura` (`CODI_ESTADO`, `DESCRIPCION`) VALUES
+(12, 'sasa');
 
 -- --------------------------------------------------------
 
@@ -58,6 +72,13 @@ CREATE TABLE `factura` (
   `VALOR_FAC` int(18) NOT NULL,
   `FECHA_FAC` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `factura`
+--
+
+INSERT INTO `factura` (`ID_FACTURA`, `NUME_DOC`, `CODI_ESTADO`, `VALOR_FAC`, `FECHA_FAC`) VALUES
+(1, 1212, 12, 100, '2020-09-10 00:00:00');
 
 --
 -- Índices para tablas volcadas
