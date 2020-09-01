@@ -17,7 +17,7 @@ export class AgregarFacturaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  facturaModel = new Factura(112,112 ,1212 ,undefined)
+  facturaModel = new Factura(1,32 ,100 ,24/08/2020)
 
   onSubmit() {
     this.facturasService.addFactura(this.facturaModel).subscribe(() => {
